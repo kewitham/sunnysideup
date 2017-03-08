@@ -10,11 +10,16 @@
     -o-background-size: cover;
 }
 
+body{
+    font-family: 'Poppins';
+}
+
 h1{
 	text-align: center;
 	margin-top: 60px;
 	color:white;
     font-size:80px;
+    font-weight: bold;
 }
 
 h3{
@@ -32,23 +37,46 @@ h5{
     text-align:left;
 }
 
+#currentconditions{
+    text-align: left;
+}
+
 #weatherpic1{
-    width:200px;
-    height:200px;
+    width:100px;
+    height:100px;
+    background-repeat: no-repeat;
+    background-position: center; 
 }
 
 #weatherpic2{
-    width:200px;
-    height:200px;
+    width:100px;
+    height:100px;
+    background-repeat: no-repeat;
+    background-position: center; 
 }
 
 #weatherpic3{
-    width:200px;
-    height:200px;
+    width:100px;
+    height:100px;
+    background-repeat: no-repeat;
+    background-position: center; 
 }
 
-body {
-    padding-top: 70px;  
+img#weatherpic1.img-responsive.portfolio-item{
+    margin-top: 15px;
+}
+
+img#weatherpic2.img-responsive.portfolio-item{
+    margin-top: 15px;
+}
+
+img#weatherpic3.img-responsive.portfolio-item{
+    margin-top: 15px;
+}
+
+div#currenttemp{
+    margin-top: 5px;
+    font-size: 20px;
 }
 
 .portfolio-item {

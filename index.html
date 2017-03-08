@@ -17,7 +17,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -27,7 +27,7 @@
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 
 <!-- <script src="js/carousel.js"></script> -->
-
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
@@ -35,7 +35,7 @@
 </head>
 
 <body>
-
+<script type="text/javascript" src="js/weather.js"></script>
 
 <!-- navigation -->
  <!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
@@ -63,10 +63,10 @@
   </div>
 </nav> -->
 
-<nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+    <! Brand and toggle get grouped for better mobile display -->
+   <!--  <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -76,8 +76,8 @@
       <a class="navbar-brand" href="#">Sunnyside</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <! Collect the nav links, forms, and other content for toggling -->
+    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Sunny</a></li>
@@ -96,9 +96,9 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    </div><! /.navbar-collapse -->
+<!--   </div>/.container-fluid
+</nav> --> 
 
 <header id="top" class="header">
         <div class="text-vertical-center">
@@ -109,12 +109,32 @@
 
  <!-- Page Content -->
 <div class="container">
+    <div class="row">
+    <div class="col-lg-12">
+      <h3 class="page-header" id="currentconditions">Current Conditions</h3>
+            </div>
+      <div class="col-lg-6" id="currenttemp">
+
+        <!-- form id="weather-form">
+          <label for="weather-input">Search for weather here:</label>
+          <input type="text" id="weather-input"><br>
+    
+          <input id="addWeather" type="submit" value="search">
+        </form> -->
+
+
+<div id="weatherView"></div>
+<div id="weatherDiv"></div>
+
+      </div>
+
+    </div>
     
      <div class="row">
             <div class="col-lg-12">
                 <h3 class="page-header" id="forecast">Forecast</h3>
             </div>
-    <div class="container">
+<!--     <div class="container">
             <div class="col-lg-3">
             <h5>Monday</h5>
             </div>
@@ -126,23 +146,23 @@
             </div>
             <div class="col-lg-3">
             </div>
-    </div>
+    </div> -->
 
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-sm-3 col-xs-6" id="forecast1">
                 <a href="#">
-                    <img id="weatherpic1" class="img-responsive portfolio-item" src="css/img/thunder.png" alt="Monday">
+                    <img id="weatherpic1" class="img-responsive portfolio-item" src="">
                 </a>
             </div>
 
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-sm-3 col-xs-6" id="forecast2">
                 <a href="#">
-                    <img id="weatherpic2" class="img-responsive portfolio-item" src="css/img/snow.png" alt="Tuesday">
+                    <img id="weatherpic2" class="img-responsive portfolio-item" src="" alt="">
                 </a>
             </div>
 
-            <div class="col-sm-3 col-xs-6">
+            <div class="col-sm-3 col-xs-6" id="forecast3">
                 <a href="#">
-                    <img id="weatherpic3" class="img-responsive portfolio-item" src="css/img/rain.png" alt="Wednesday">
+                    <img id="weatherpic3" class="img-responsive portfolio-item" src="" alt="">
                 </a>
             </div>
 
@@ -196,34 +216,34 @@
   <li class="media">
     <div class="media-left">
       <a href="#">
-        <img class="media-object" src="css/img/fog.jpg" alt="fog">
+        <img class="media-object" src="css/img/moon.jpg" alt="moon">
       </a>
     </div>
-    <div class="media-body">
-      <h4 class="media-heading">Foggy</h4>
-      We got some fog. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    <div class="media-body" id="moon">
+      <h4 class="media-heading">Moon Phase</h4>
+      
     </div>
   </li>
   <li class="media">
     <div class="media-left">
       <a href="#">
-        <img class="media-object" src="css/img/sunshine.jpg" alt="sun">
+        <img class="media-object" src="css/img/sunrise.jpg" alt="sunrise">
       </a>
     </div>
-    <div class="media-body">
-      <h4 class="media-heading">Sunshine</h4>
-      It's sunny! Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+    <div class="media-body" id="sunrise">
+      <h4 class="media-heading">Sunrise</h4>
+     
     </div>
   </li>
   <li class="media">
     <div class="media-left">
       <a href="#">
-        <img class="media-object" src="css/img/flurries.jpg" alt="flurries">
+        <img class="media-object" src="css/img/sunset.jpg" alt="sunset">
       </a>
     </div>
-    <div class="media-body">
-      <h4 class="media-heading">Flurries</h4>
-      Could be snow. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.
+    <div class="media-body" id="sunset">
+      <h4 class="media-heading">Sunset</h4>
+      
     </div>
   </li>
 </ul>
@@ -242,15 +262,15 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="css/img/fog.jpg" alt="fog" class="carouselimg">
+      <img src="css/img/moon.jpg" alt="moon" class="carouselimg">
     </div>
 
     <div class="item">
-      <img src="css/img/sunshine.jpg" alt="sunshine" class="carouselimg">
+      <img src="css/img/sunrise.jpg" alt="sunrise" class="carouselimg">
     </div>
 
     <div class="item">
-      <img src="css/img/flurries.jpg" alt="flurries" class="carouselimg">
+      <img src="css/img/sunset.jpg" alt="sunset" class="carouselimg">
     </div>
   </div>
   </div>
